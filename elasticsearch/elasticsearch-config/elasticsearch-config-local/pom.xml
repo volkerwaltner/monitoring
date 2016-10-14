@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>elasticsearch-config</artifactId>
+        <groupId>com.mimacom.monitoring</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>elasticsearch-config-local</artifactId>
+
+    <properties>
+        <monitoring.stufe>local</monitoring.stufe>
+        <monitoring.cluster.host>localhost</monitoring.cluster.host>
+        <monitoring.http.port>9200</monitoring.http.port>
+        <monitoring.tcp.port>9300</monitoring.tcp.port>
+        <monitoring.cluster.name>Monitoring-${monitoring.stufe}</monitoring.cluster.name>
+        <els.binary.dir>${project.parent.parent.basedir}/elasticsearch-bin/target/elasticsearch-${elasticsearch.version}</els.binary.dir>
+        <els.conf.dir>${project.build.outputDirectory}</els.conf.dir>
+    </properties>
+
+</project>

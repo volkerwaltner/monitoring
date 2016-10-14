@@ -1,0 +1,13 @@
+cluster.name: "#{monitoring.cluster.name}"
+node.name: "Monitoring-central-#{monitoring.stufe}"
+index.numbe_of_shards: 8
+index.number_of_replicas: 0
+bootstrap.mlockall: true
+transport.tcp.port: "#{monitoring.tcp.port}"
+http:port: "#{monitoring.http.port}
+discovery.zen.minimum_master_nodes: 1
+discovery.zen.ping.multicast.enabled: false
+
+script.default_lang: "native"
+script.disable_dynamic: true
+network.tcp.keep_alive: true
